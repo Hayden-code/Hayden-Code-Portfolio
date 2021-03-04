@@ -1,0 +1,41 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1, h2, h3 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.projectContainer {
+    display: flex;
+    flex: 1, 0, 150px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project { 
+    height: fit-content;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    flex: 2, 0 auto;
+    padding: 10px;
+    border: 10px groove aqua;
+    background-color: rgb(202, 201, 201);
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.comingSoon {
+    height: 100px;
+    width: 175px;
+    background-color: black;
+    color: aqua;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
