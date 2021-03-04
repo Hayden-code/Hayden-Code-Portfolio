@@ -11,7 +11,6 @@ h1, h2, h3 {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-
 body {
     background-color: rgb(255,158,153,0.7);
     margin: 0px;
@@ -58,8 +57,6 @@ body {
     margin: 5px;
 }
 
-
-
 .comingSoon {
     height: 107px;
     width: 175px;
@@ -92,9 +89,6 @@ body {
     flex: 0, 2, 50%;
 
 }
-
-
-
 
 @media (min-width: 1px) {
     .project {
