@@ -1,3 +1,8 @@
+:root {
+    --BKG-color: rgb(202, 201, 201);
+    --Border: aqua
+}
+
 * {
     font-family: 'Times New Roman', Times, serif;
 }
@@ -6,30 +11,57 @@ h1, h2, h3 {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+
+body {
+    background-color: rgb(255,158,153,0.7);
+    margin: 0px;
+}
+
+.title {
+    background-color: var(--BKG-color);
+    padding: 5px;
+    position: relative;
+}
+
+.margin {
+    margin: 8px;
+    max-width: 720px;
+}
+
+.Box {
+    max-width:660px;
+    background-color: var(--BKG-color);
+    border: 10px groove var(--Border);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
 .projectContainer {
     display: flex;
     flex: 1, 0, 150px;
     flex-wrap: wrap;
-    justify-content: center;
+    
 }
 
 .project { 
-    height: fit-content;
-    width: 300px;
+    height: 215px;
     display: flex;
     flex-direction: column;
     flex: 2, 0 auto;
     padding: 10px;
-    border: 10px groove aqua;
-    background-color: rgb(202, 201, 201);
+    border: 10px groove var(--Border);
+    background-color: var(--BKG-color);
     align-items: center;
     text-align: center;
     border-radius: 5px;
     margin: 5px;
 }
 
+
+
 .comingSoon {
-    height: 100px;
+    height: 107px;
     width: 175px;
     background-color: black;
     color: aqua;
@@ -37,5 +69,58 @@ h1, h2, h3 {
     display: flex;
     align-items: center;
     justify-content: center;
+    object-fit: contain;
+    transition-duration: .2s;
+    position: relative;
+}
 
+.imgBox {
+    position: absolute;
+    top: 85px;
+    left: 720px;
+    right: 0px;
+    height: 934px;
+    width: auto;
+    overflow: hidden;
+}
+
+.imgBox img {
+    margin: 5px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex: 0, 2, 50%;
+
+}
+
+
+
+
+@media (min-width: 1px) {
+    .project {
+        width: 100%;
+    }
+    .terminal {
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 415px) {
+    .comingSoon:hover {
+        transition-duration: .2s;
+        transform: scale(2);
+    }
+}
+
+@media (min-width: 715px) {
+    .project {
+        width: 300px;
+    }
+    .comingSoon:hover {
+        transition-duration: .2s;
+        transform: scale(1.75) ;
+    }
+    .terminal {
+        visibility: visible;
+    }
 }
