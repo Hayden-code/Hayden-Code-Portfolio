@@ -2,8 +2,8 @@
 
 :root {
     --BKG-color: rgba(255, 255, 255, 0.5);
-    --BKG-color2: #FDFD96;
-    --Border: aqua;
+    --BKG-color2: rgba(0, 0, 128, 0.75);
+    --Border: 1px solid white;
     --Radius: 10px;
     --Content-margin: 200px 0px 200px 0px;
 }
@@ -17,21 +17,23 @@
 }
 
 body {
-    background-image: url("terminal.jpg");
+    background-image: url("./images/terminal.jpg");
     background-attachment: fixed;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 10px;
+    text-align: center;    
 }
 h1 {
     font-size: 36px;
-    text-align: center;
 }
 h2 {
     font-size: 30px;
-    text-align: center;
+}
+h4 {
+    font-size: 20px;
 }
 p {
     text-align: center;
@@ -42,12 +44,7 @@ li {
     list-style-position: inside;
     text-align: center;
 }
-nav {
-    position: fixed;
-    background-color: var(--BKG-color2);
-    height: 100%;
-    width: 200px;
-}
+
 nav > ul {
     list-style-type: none;
 }
@@ -60,30 +57,44 @@ a :visited {
     color: black
 }
 
-/* Navbar */
+/* Navbar buttons */
+
+nav {
+    position: fixed;
+    background-color: var(--BKG-color2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    height: 100%;
+    width: 200px;
+}
+
+nav > img {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
 
 .navBtn {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 30px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: unset;
-    padding: 10px;
-    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    width: 80%;
+    margin: 10px;
     border-radius: var(--Radius);
-
+    position: relative;
+    top: 20px;
 }
 
 /* Rest of the page */
 
 #content {
     position: absolute;
-    padding: 50px;
+    padding: 100px;
 }
 #content > div {
     background-color: var(--BKG-color);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    border: 1px solid white;
+    border: var(--Border);
     border-radius: var(--Radius);
     margin: var(--Content-margin);
     max-width: 1000px;
@@ -103,7 +114,6 @@ a :visited {
     background-color: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    height: 215px;
     display: flex;
     flex-direction: column;
     flex: 2, 0 auto;
@@ -127,24 +137,36 @@ a :visited {
     object-fit: contain;
     transition-duration: .2s;
     position: relative;
+    border-radius: 5px;
 }
 
-.imgBox {
-    position: absolute;
-    top: 85px;
-    left: 720px;
-    right: 0px;
-    height: 934px;
-    width: auto;
-    overflow: hidden;
+/* extra repos */
+
+.repoBtn {
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    width: 60%;
+    margin: 10px;
+    border-radius: var(--Radius);
+    position: relative;
+    top: 20px;
 }
 
-.imgBox img {
-    margin: 5px;
-    height: 100%;
+#repos {
+    text-align: center;
+    margin: 50px;
+}
+
+.repoLi {
+    position: relative;
+    top: 30px;
     width: 100%;
-    display: flex;
-    flex: 0, 2, 50%;
+    background-color: var(--BKG-color);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: var(--Border);
+    border-radius: var(--Radius);
+    margin: 10px;
 }
 
 @media (min-width: 1px) {
@@ -172,7 +194,10 @@ a :visited {
     }
     .comingSoon:hover {
         transition-duration: .2s;
-        transform: scale(1.75) ;
+        transform: scale(1.75);
+    }
+    .comingSoon:hover ~ p {
+        filter: blur(5px);
     }
     #content {
         left: 200px;

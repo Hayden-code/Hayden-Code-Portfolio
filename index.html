@@ -4,22 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hayden Jones Portfolio</title>
-    <link rel="icon" type="img/png" href="HughJass_hj_YellowOnBlue+(1).png" />
+    <link rel="icon" type="img/png" href="./images/HughJass_hj_YellowOnBlue+(1).png"/>
     <link rel="stylesheet" href="stylesheet.css" />
   </head>
   <body>
     <nav>
       <ul>
         <li>
-         <button class="navBtn"><a href="#bio"><h2>Bio</h2></a>
+         <button class="navBtn"><a href="#bio"><h4>Bio</h4></a>
         </li>
         <li>
-          <button class="navBtn"><a href="#projects"><h2>Projects</h2></a>
+          <button class="navBtn"><a href="#projects"><h4>Projects</h4></a>
         </li>
         <li>
-          <button class="navBtn"><a href="#contact"><h2>Contact</h2></a>
+          <button class="navBtn"><a href="#contact"><h4>Contact</h4></a>
         </li>
       </ul>
+      <img src="./images/profile.jpeg" alt="picture of myself" width="90%">
     </nav>
     <div id="content">
       <div>
@@ -36,6 +37,18 @@
           I do 100% effort.
         </p>
         <p>
+          Before taking up coding, my experience predominantly comes in the form 
+          of customer service however, I have worked in various workplaces. I 
+          love interacting with customers and coworkers, I work well both in a 
+          team and leading a team. I enjoy sharing knowledge, positivity and 
+          creativity with those around me. Previous work experience includes; 
+          bartender/bar supervisor, barista, cashier, junk removalist/truck 
+          driver, landscapers assistant, lifestyle assistant, nursing student, 
+          roustabout and tennis coach just to name a few. For more details on 
+          my previous experience, check my LinkedIn, there’s a link at the 
+          bottom of the page.
+        </p>
+        <p>
           I am sudying to become a full stack web developer, participating in a
           6 month part time course that will give me the skills required to get
           a job in the coding industry. I have been enjoying the challenges and 
@@ -50,23 +63,29 @@
           <li>CSS</li>
           <li>Javascript</li>
           <li>API integration</li>
-
         </ul>
       </div>
       <div id="projects">
-        <h1>PROJECTS</h1>
+        <h2>PROJECTS</h2>
+        <h3>Four recent projects I've been working on. Enjoy!</h3>
+        <p>Hover of photo to enhance, click to go to GitHub repository.</p>
         <div class="projectContainer">
           <div class="project">
-            <h3>Project 1</h3>
+            <h3>AFL Website</h3>
             <!--Replace with project homepage screenshot-->
-            <div class="comingSoon">Coming Soon!</div>
-            <p>Description of Project</p>
+            <div class="comingSoon"><img src="./images/signupPage.png" alt="code in a terminal" width="100%" height="100%" onclick="location.href='http://github.com/Hayden-code/AFLWebsite'"></div>
+            <p>
+              Creating a website for AFL fans with features including: weekly 
+              matches, weather info, basic rules, news and team specific stats. 
+              Languages used: HTML, CSS, Javascript. Squiggle API used.
+            </p>
           </div>
   
           <div class="project">
             <h3>Project 2</h3>
             <!--Replace with project homepage screenshot-->
             <div class="comingSoon">Coming Soon!</div>
+            <p>Description of Project</p>
             <p>Description of Project</p>
           </div>
   
@@ -75,6 +94,7 @@
             <!--Replace with project homepage screenshot-->
             <div class="comingSoon">Coming Soon!</div>
             <p>Description of Project</p>
+            <p>Description of Project</p>
           </div>
   
           <article class="project">
@@ -82,7 +102,13 @@
             <!--Replace with project homepage screenshot-->
             <div class="comingSoon">Coming Soon!</div>
             <p>Description of Project</p>
+            <p>Description of Project</p>
           </article>
+        </div>
+        <div id="repos">
+          <button class="repoBtn" onclick="getRepos()"><h2>Show More Repositories!</h2></button>
+          <button class="repoBtn" onclick="hideRepos()"><h2>Hide Repositories!</h2></button>
+          <div id="extraReposContainer"></div>          
         </div>
       </div>
 
@@ -103,5 +129,6 @@
         </ul>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
