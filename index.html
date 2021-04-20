@@ -8,57 +8,85 @@
     <link rel="stylesheet" href="stylesheet.css" />
   </head>
   <body>
-    <header>
-      <h1 class="title">Hayden Jones' Portfolio</h1>
-    </header>
-    <div class="margin">
-      <section class="Box">
+    <nav>
+      <ul>
+        <li>
+         <button class="navBtn"><a href="#bio"><h2>Bio</h2></a>
+        </li>
+        <li>
+          <button class="navBtn"><a href="#projects"><h2>Projects</h2></a>
+        </li>
+        <li>
+          <button class="navBtn"><a href="#contact"><h2>Contact</h2></a>
+        </li>
+      </ul>
+    </nav>
+    <div id="content">
+      <div>
+        <h1>
+          Welcome My Portfolio Website
+        </h1>        
+      </div>
+      <div id="bio">
         <h2>Bio</h2>
+        <p>
+          My name is Hayden Jones, I am from a town called Mirboo North located 
+          in South-Gippsland, Victoria. Some of my interests include, staying 
+          fit and healthy, sports, interacting with people, and giving everything
+          I do 100% effort.
+        </p>
         <p>
           I am sudying to become a full stack web developer, participating in a
           6 month part time course that will give me the skills required to get
-          a job in the coding industry. Current Skills include:
+          a job in the coding industry. I have been enjoying the challenges and 
+          opertunities to work with others in an engaging hands on environment.
+          <br>
+          <br>
+          My current skills and knowledge include:
         </p>
         <ul>
+          <li>GitHub</li>
           <li>HTML</li>
           <li>CSS</li>
           <li>Javascript</li>
+          <li>API integration</li>
+
         </ul>
-      </section>
-      <section class="projectContainer">
-        <article class="project">
-          <h3>Project 1</h3>
-          <!--Replace with project homepage screenshot-->
-          <div class="comingSoon">Coming Soon!</div>
-          <p>Description of Project</p>
-        </article>
-
-        <article class="project">
-          <h3>Project 2</h3>
-          <!--Replace with project homepage screenshot-->
-          <div class="comingSoon">Coming Soon!</div>
-          <p>Description of Project</p>
-        </article>
-
-        <article class="project">
-          <h3>Project 3</h3>
-          <!--Replace with project homepage screenshot-->
-          <div class="comingSoon">Coming Soon!</div>
-          <p>Description of Project</p>
-        </article>
-
-        <article class="project">
-          <h3>Project 4</h3>
-          <!--Replace with project homepage screenshot-->
-          <div class="comingSoon">Coming Soon!</div>
-          <p>Description of Project</p>
-        </article>
-        <div class="imgBox">
-          <img src="terminal.jpg" alt="Terminal with code" />
+      </div>
+      <div id="projects">
+        <h1>PROJECTS</h1>
+        <div class="projectContainer">
+          <div class="project">
+            <h3>Project 1</h3>
+            <!--Replace with project homepage screenshot-->
+            <div class="comingSoon">Coming Soon!</div>
+            <p>Description of Project</p>
+          </div>
+  
+          <div class="project">
+            <h3>Project 2</h3>
+            <!--Replace with project homepage screenshot-->
+            <div class="comingSoon">Coming Soon!</div>
+            <p>Description of Project</p>
+          </div>
+  
+          <div class="project">
+            <h3>Project 3</h3>
+            <!--Replace with project homepage screenshot-->
+            <div class="comingSoon">Coming Soon!</div>
+            <p>Description of Project</p>
+          </div>
+  
+          <article class="project">
+            <h3>Project 4</h3>
+            <!--Replace with project homepage screenshot-->
+            <div class="comingSoon">Coming Soon!</div>
+            <p>Description of Project</p>
+          </article>
         </div>
-      </section>
+      </div>
 
-      <section class="Box">
+      <div id="contact">
         <h2>Contact Me</h2>
         <ul>
           <li>
@@ -73,7 +101,7 @@
             >
           </li>
         </ul>
-      </section>
+      </div>
     </div>
   </body>
 </html>
